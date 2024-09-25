@@ -1,0 +1,9 @@
+{
+	"name": "victorrscertus2024",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a5992742-3b54-404b-8346-8cec1351211e",
+		"tenantId": "35a106ca-b696-439f-b072-1c2dd37f9e40"
+	}
+}

@@ -4,7 +4,7 @@
 		"description": "Ingesta de archivos desde la capa bronce hacia la capa plata.",
 		"activities": [
 			{
-				"name": "Notebook1",
+				"name": "Ingesta_capa_bronce_plata",
 				"type": "DatabricksNotebook",
 				"dependsOn": [],
 				"policy": {

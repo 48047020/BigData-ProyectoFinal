@@ -1,6 +1,29 @@
 {
 	"name": "ingesta_capa_plata_oro",
 	"properties": {
+		"activities": [
+			{
+				"name": "Ingesta_capa_plata_oro",
+				"description": "Ingesta de archivo desde la capa plata hacia la capa oro",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/hardick_dce@hotmail.com/Ingesta_capa_plata_oro"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks_DataFactory1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
 		"annotations": []
 	}
 }

@@ -1,0 +1,71 @@
+{
+	"name": "execute_pipeline",
+	"properties": {
+		"description": "Ejecución de los pipelines: ingesta, transformación y carga.",
+		"activities": [
+			{
+				"name": "Exe_Ingest_Bronce",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_input_capa_bronce",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Exe_Transform_Plata",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Exe_Ingest_Bronce",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_capa_bronce_plata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "Exe_Load_Oro",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "Exe_Transform_Plata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "ingesta_capa_plata_oro",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": []
+	}
+}

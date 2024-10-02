@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "victorrscertus2024"
+		},
+		"AzureDatabricks_DataFactory_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricks_DataFactory1_accessToken": {
+			"value": ""
+		},
+		"Conector_ADLS_DataFactory_accountKey": {
+			"value": ""
+		},
+		"AzureDatabricks_DataFactory_properties_typeProperties_existingClusterId": {
+			"value": "0927-012630-wifsh656"
+		},
+		"AzureDatabricks_DataFactory1_properties_typeProperties_existingClusterId": {
+			"value": "0927-012630-wifsh656"
+		},
+		"Conector_ADLS_DataFactory_properties_typeProperties_url": {
+			"value": "https://victorrscertus.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

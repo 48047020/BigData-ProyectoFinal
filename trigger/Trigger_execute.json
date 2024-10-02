@@ -1,0 +1,25 @@
+{
+	"name": "Trigger_execute",
+	"properties": {
+		"description": "Trigger que ejecutará diariamente el pipeline execute_pipeline.",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "execute_pipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2024-10-02T12:37:00",
+				"timeZone": "SA Pacific Standard Time"
+			}
+		}
+	}
+}
